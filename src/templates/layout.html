@@ -18,7 +18,7 @@
          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
          crossorigin="anonymous"
         >
-
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
         <title> {% block title %}ML Coverage Map{% endblock %} </title>
 
     </head>
@@ -35,12 +35,12 @@
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav mr-auto">
                         <a class="nav-item nav-link" id="home" href="/">Home</a>
-                        <a class="nav-item nav-link" id="signup" href="/signup">Sign Up</a>
+                        <a class="nav-item nav-link" id="signup" href="/signup">Register</a>
                     </div>
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav">
                         <a class="nav-item nav-link" id="login" href="/login">Login</a>
-                        <a class="nav-item nav-link" id="logout" href="/logout">Log Out</a>
+                        <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
                         
                     </div>
                 </div>
