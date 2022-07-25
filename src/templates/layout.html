@@ -35,7 +35,7 @@
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav mr-auto">
                         <a class="nav-item nav-link" id="home" href="/">Home</a>
-                        <a class="nav-item nav-link" id="signup" href="/signup">Register</a>
+                        <a class="nav-item nav-link" id="register" href="/register">Register</a>
                     </div>
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav">
@@ -47,7 +47,21 @@
             </div>
         </nav>
         </header>
-
+        <main role="main" class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ category }}">
+                                {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </div>
+            </div>
+        </main>
         {% block content %} <h1>This is home page</h1> {% endblock %}
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -14,7 +14,7 @@ import imp
 from flask import Flask
 def create_app():
     app=Flask(__name__)
-    app.config['SECRET-KEY']='f4ed13e80a7276c8501a6fc19291ad38'
+    app.config['SECRET_KEY'] = 'f4ed13e80a7276c8501a6fc19291ad38'
 
     from .views import views
     from .auth import auth
